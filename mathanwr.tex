@@ -63,8 +63,6 @@ Example: \href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-
     \int \frac{x^2+2}{(x+1)(x^2-2x+3)}dx = \frac{1}{2}ln|x+1| + \frac{1}{4} ln|x^2-2x+3| + \frac{1}{\sqrt{2}} \arctan (\frac{x-1}{\sqrt{2}}) + C
 \end{equation}
 
-\newpage
-
 \subsection{Fractional rational function with transcendental part.}
 
 Methods: variable replacement, differentiation, integration by parts, application under differential. \\
@@ -168,5 +166,75 @@ Example: \href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-
 
 \begin{equation}
     f =1 + 2(x-\frac{\pi}{4}) + 2(x-\frac{\pi}{4})^2 + \frac{\pi}{2}y^2 + o((x-\frac{\pi}{4})^2+y^2), \; x \rightarrow \frac{\pi}{4}, \; y \rightarrow 0
+\end{equation}
+
+
+\newpage
+\section{Third problem:  Length, area and volume calculation using definite integral}
+
+\subsection{Length}
+
+Methods: . \\
+Warnings: . \\
+Example: \href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-23/%D0%9C%D0%90%D0%98%D0%B8%D0%A0_%D0%92_23.pdf}{2022–2023}, third task (\href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-23/%D0%9C%D0%90%D0%98%D0%B8%D0%A0_%D0%92_23%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%8B.pdf}{answer}).
+
+\begin{equation}
+    x = sin^3(\frac{t}{2}), \; x = cos^3(\frac{t}{2}), z = \frac{3}{4}(t+sin(t)), \; 0 \leq t \leq \pi, \; |L|=?
+\end{equation}
+
+\begin{equation}
+    |L| = \int_{a}^{b} \sqrt{(\frac{dx}{dt})^2+(\frac{dy}{dt})^2+(\frac{dz}{dt})^2}dt
+\end{equation}
+
+\begin{equation*}
+    \frac{dx}{dt} = 3sin^2(t/2) cos(t/2) \frac{1}{2}
+\end{equation*}
+
+\begin{equation*}
+    \frac{dy}{dt} = 3cos^2(t/2) (-sin(t/2)) \frac{1}{2}
+\end{equation*}
+
+\begin{equation*}
+    \frac{dz}{dt} = \frac{3}{4}(1+cos(t))
+\end{equation*}
+
+\begin{equation*}
+    |L| = \int_{0}^{\pi} \sqrt{\frac{9}{4} sin^2(t/2) cos^2(t/2) (sin^2(t/2)+cos^2(t/2))+\frac{9}{16}+\frac{9}{16}cos^2(t)+\frac{9}{8}cos(t)}dt
+\end{equation*}
+
+\begin{equation*}
+    |L| = \int_{0}^{\pi} \sqrt{\frac{9}{4} sin^2(t/2) cos^2(t/2)+\frac{9}{16}+\frac{9}{16}cos^2(t)+\frac{9}{8}cos(t)}dt
+\end{equation*}
+
+\begin{equation*}
+    |L| = \int_{0}^{\pi} \sqrt{\frac{9}{16} sin^2(t)+\frac{9}{16}+\frac{9}{16}cos^2(t)+\frac{9}{8}cos(t)}dt
+\end{equation*}
+
+\begin{equation*}
+    |L| = \int_{0}^{\pi} \sqrt{\frac{9}{8}+\frac{9}{8}cos(t)}dt
+\end{equation*}
+
+\begin{equation*}
+    |L| = \int_{0}^{\pi} \frac{3}{2\sqrt{2}} \sqrt{1+cos(t)}dt
+\end{equation*}
+
+\begin{equation*}
+    cos^2(t/2) = \frac{1+cos(t)}{2}
+\end{equation*}
+
+\begin{equation*}
+    |L| = \int_{0}^{\pi} \frac{3}{2} | cos(t/2) | dt
+\end{equation*}
+
+\begin{equation*}
+    |L| = \int_{0}^{\pi} 3 | cos(t/2) | dt/2
+\end{equation*}
+
+\begin{equation*}
+    |L| = \int_{0}^{\pi/2} 3 | cos(\phi) | d\phi
+\end{equation*}
+
+\begin{equation}
+    |L| = 3
 \end{equation}
 \end{document}
