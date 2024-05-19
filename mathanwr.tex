@@ -1,0 +1,172 @@
+\documentclass{article}
+\usepackage{graphicx} % required for inserting images
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % math
+\usepackage[unicode, pdftex]{hyperref} % hyperlinks
+
+\begin{document}
+
+\section{First problem: Indefinite integral}
+a. Rational function. \\
+b. Fractional rational function with transcendental part.
+
+\subsection{Rational function}
+
+Methods: indefinite coefficients, application under differential. \\
+Warnings: dont forget when you have found the coefficients, substitute them into the equation to make sure that they are correct. \\
+Example: \href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-23/%D0%9C%D0%90%D0%98%D0%B8%D0%A0_%D0%92_23.pdf}{2022–2023}, first task (\href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-23/%D0%9C%D0%90%D0%98%D0%B8%D0%A0_%D0%92_23%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%8B.pdf}{answer}).
+
+\begin{equation}
+    \int \frac{x^2+2}{(x+1)(x^2-2x+3)}dx = ?
+\end{equation}
+
+\begin{equation*}
+    \int \frac{x^2+2}{(x+1)(x^2-2x+3)}dx = \int \frac{A}{x+1}dx + \int \frac{Bx+C}{x^2-2x+3}dx
+\end{equation*}
+
+\begin{equation}
+    x^2+2 = A(x^2-2x+3) + (Bx+C)(x+1)
+\end{equation}
+
+\begin{equation*}
+    1. \; 2 = 3A + C
+\end{equation*}
+
+\begin{equation*}
+    x. \; 0 = -2A + B + C
+\end{equation*}
+
+\begin{equation*}
+    x^2. \; 1 = A + B
+\end{equation*}
+
+\begin{equation}
+    A = \frac{1}{2}, \; B = \frac{1}{2}, \; C = \frac{1}{2}
+\end{equation}
+
+\begin{equation*}
+    \int \frac{x^2+2}{(x+1)(x^2-2x+3)}dx = \int \frac{\frac{1}{2}}{x+1}dx + \int \frac{\frac{x}{2}+\frac{1}{2}}{x^2-2x+3}dx = \frac{1}{2}ln|x+1| + \frac{1}{2} \int \frac{x+1}{x^2-2x+3}dx
+\end{equation*}
+
+\begin{equation*}
+    \frac{1}{2} \int \frac{x+1}{x^2-2x+3}dx = \frac{1}{2} \int \frac{x+1}{2x-2}d(ln|x^2-2x+3|) = \frac{1}{4} \int \frac{2x-2+2+2}{2x-2}d(ln|x^2-2x+3|)
+\end{equation*}
+
+\begin{equation*}
+    \frac{1}{4} \int d(ln|x^2-2x+3|) + \int \frac{1}{x^2-2x+3}dx = \frac{1}{4} ln|x^2-2x+3| + \int \frac{1}{(x-1)^2+2}dx
+\end{equation*}
+
+\begin{equation*}
+    \frac{1}{4} ln|x^2-2x+3| + \frac{1}{\sqrt{2}} \arctan (\frac{x-1}{\sqrt{2}}) + C
+\end{equation*}
+
+\begin{equation}
+    \int \frac{x^2+2}{(x+1)(x^2-2x+3)}dx = \frac{1}{2}ln|x+1| + \frac{1}{4} ln|x^2-2x+3| + \frac{1}{\sqrt{2}} \arctan (\frac{x-1}{\sqrt{2}}) + C
+\end{equation}
+
+\newpage
+
+\subsection{Fractional rational function with transcendental part.}
+
+Methods: variable replacement, differentiation, integration by parts, application under differential. \\
+Example: \href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-23/%D0%9C%D0%90%D0%98%D0%B8%D0%A0_%D0%92_23.pdf}{2022–2023}, first task (\href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-23/%D0%9C%D0%90%D0%98%D0%B8%D0%A0_%D0%92_23%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%8B.pdf}{answer}).
+
+\begin{equation}
+    \int \frac{x exp(x)}{\sqrt{exp(x)-1}}dx = ?
+\end{equation}
+
+\begin{equation}
+    t = \sqrt{exp(x)-1}
+\end{equation}
+
+\begin{equation}
+    t^2+1 = exp(x)
+\end{equation}
+
+\begin{equation}
+    ln(t^2+1) = x
+\end{equation}
+
+\begin{equation*}
+    dt = \frac{1}{2} \frac{exp(x)}{\sqrt{exp(x)-1}}dx = \frac{1}{2} \frac{t^2+1}{t}dx
+\end{equation*}
+
+\begin{equation}
+    dx = \frac{2tdt}{1+t^2}
+\end{equation}
+
+\begin{equation*}
+    \int \frac{x exp(x)}{\sqrt{exp(x)-1}}dx = \int \frac{(t^2+1)ln(t^2+1)}{t} \frac{2tdt}{1+t^2} = \int 2ln(1+t^2)dt
+\end{equation*}
+
+\begin{equation*}
+    \int 2ln(1+t^2)dt = 2tln(1+t^2) - \int 2t d(ln(1+t^2)) = 2tln(1+t^2) - \int 2t \frac{2t}{1+t^2}dt
+\end{equation*}
+
+\begin{equation*}
+    2tln(1+t^2) - \int \frac{4t^2}{1+t^2}dt = 2tln(1+t^2) - \int \frac{4t^2+4-4}{1+t^2}dt
+\end{equation*}
+
+\begin{equation*}
+    - \int 4dt + \int \frac{4dt}{1+t^2} + 2tln(1+t^2) = 2tln(1+t^2) - 4t + 4 \arctan (t) + C
+\end{equation*}
+
+\begin{equation}
+    \int \frac{x exp(x)}{\sqrt{exp(x)-1}}dx = 2tln(1+t^2) - 4t + 4 \arctan (t) + C
+\end{equation}
+
+
+\newpage
+\section{Second problem: Differentials and Taylor's formula for functions of several variables }
+Methods: partial derivatives, Taylor's multivariable formula. \\
+Warnings: dont forget about function value at a point (you must add it to Taylor's formula as constant) and about additional multipliers (if you write first derivative at Taylor's formula you divide by 1, second derivative by 2, third derivative by 6 etc.). \\
+Example: \href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-23/%D0%9C%D0%90%D0%98%D0%B8%D0%A0_%D0%92_23.pdf}{2022–2023}, second task (\href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-23/%D0%9C%D0%90%D0%98%D0%B8%D0%A0_%D0%92_23%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%8B.pdf}{answer}).
+
+\begin{equation}
+    f(x,y) = \tan (x+sin(xy^2)), \; M=(\frac{\pi}{4},0), \; df=? \; df^2=? \; f = ? + o((x-\frac{\pi}{4})^2+y^2), \; x \rightarrow \frac{\pi}{4}, \; y \rightarrow 0
+\end{equation}
+
+\begin{equation*}
+    \frac{\partial}{\partial x} f \bigg|_M = \frac{1+cos(xy^2)y^2}{cos^2(x+sin(xy^2))} \bigg|_M = 2
+\end{equation*}
+
+\begin{equation*}
+    \frac{\partial}{\partial y} f \bigg|_M = \frac{cos(xy^2)x2y}{cos^2(x+sin(xy^2))} \bigg|_M = 0 
+\end{equation*}
+
+\begin{equation*}
+    \frac{\partial}{\partial x} \frac{\partial}{\partial y} f \bigg|_M = y \cdot ... \bigg|_M = 0
+\end{equation*}
+
+\begin{equation*}
+    \frac{\partial}{\partial y} \frac{\partial}{\partial x} f \bigg|_M = \frac{cos^2(x+sin(xy^2))(cos(xy^2)2y-y^2sin(xy^2)x2y) - }{cos^4(x+sin(xy^2))}
+\end{equation*}
+\begin{equation*}
+    \frac{ - (1+cos(xy^2)y^2)2cos(x+sin(xy^2))(-sin(x+sin(xy^2)))(cos(xy^2)x2y)}{cos^4(x+sin(xy^2))} \bigg|_M = y \cdot ... \bigg|_M = 0
+\end{equation*}
+
+\begin{equation*}
+    \frac{\partial}{\partial x} \frac{\partial}{\partial x} f \bigg|_M = \frac{(cos^2(x+sin(xy^2)))(-sin(xy^2)y^2y^2)-}{cos^4(x+sin(xy^2))}
+\end{equation*}
+\begin{equation*}
+    \frac{-(1+cos(xy^2)y^2)(2cos(x+sin(xy^2))(-sin(x+sin(xy^2)))(1+...y)}{cos^4(x+sin(xy^2))} \bigg|_M = \frac{-1 \cdot 2 cos(\pi/4) (-sin(\pi/4))}{cos^4(\pi/4)} = 
+\end{equation*}
+\begin{equation*}
+    = \frac{4\cdot 2}{2} = 4
+\end{equation*}
+
+\begin{equation*}
+    \frac{\partial}{\partial y} \frac{\partial}{\partial y} f \bigg|_M = \pi
+\end{equation*}
+
+\begin{equation}
+    df = 2dx, \; d^2f=4dx^2+\pi dy^2
+\end{equation}
+
+\begin{equation*}
+    f(M) = 1
+\end{equation*}
+
+\begin{equation}
+    f =1 + 2(x-\frac{\pi}{4}) + 2(x-\frac{\pi}{4})^2 + \frac{\pi}{2}y^2 + o((x-\frac{\pi}{4})^2+y^2), \; x \rightarrow \frac{\pi}{4}, \; y \rightarrow 0
+\end{equation}
+\end{document}
