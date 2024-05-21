@@ -2,6 +2,7 @@
 \usepackage{graphicx} % required for inserting images
 \usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % math
 \usepackage[unicode, pdftex]{hyperref} % hyperlinks
+\usepackage{amsfonts} % NZQRC
 
 \begin{document}
 
@@ -239,6 +240,28 @@ Example: \href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-
 \end{equation}
 
 \newpage
+\section{Sixth problem: Convergence of a constant sign number series}
+Method: to find a suitable convergence test.\\
+Need to know: \hyperlink{6.1}{d'Alembert's convergence test}, Cauchy's convergence test.\\
+Warnings: most convergence tests works only with constant sign number series.\\
+Example: \href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-23/%D0%9C%D0%90%D0%98%D0%B8%D0%A0_%D0%92_23.pdf}{2022–2023}, sixth task (\href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-23/%D0%9C%D0%90%D0%98%D0%B8%D0%A0_%D0%92_23%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%8B.pdf}{answer}).
+
+\begin{equation}
+    \sum_{n=1}^{\infty} \frac{C_{3n}^n}{7^n}
+\end{equation}
+
+\begin{equation*}
+    \underset{n \rightarrow \infty}{lim} \frac{C_{3n+3}^{n+1}}{7^{n+1}} \frac{7^n}{C_{3n}^{n}} = \underset{n \Rightarrow \infty}{lim} \frac{1}{7} \frac{(3n+3)!}{(n+1)!((3n+3)-(n+1))!} \frac{n!(3n-n)!}{3n!}
+\end{equation*}
+
+\begin{equation*}
+    \underset{n \rightarrow \infty}{lim} \frac{1}{7} \frac{(3n+1)(3n+2)(3n+3)}{(n+1)(2n+1)(2n+2)} = \frac{3 \cdot 3 \cdot 3}{7 \cdot 2 \cdot 2} = \frac{27}{28} < 1
+\end{equation*}
+
+     $\Rightarrow$ number series converges using d'Alembert's ratio test.
+
+
+\newpage
 \section{Eighth problem: Taylor series}
 Method: calculate derivative of a complex part, expand the result in Taylor series, integrate result, multiply result to not complex part. \\
 Need to know: \hyperlink{8.1}{derivative table (trigonometric)}, \hyperlink{8.2}{Taylor series table}, \hyperlink{8.3}{Cauchy–Hadamard theorem}. \\
@@ -276,6 +299,31 @@ Example: \href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-
 \begin{equation}
     R = 2
 \end{equation}
+
+
+\newpage
+\section{Sixth problem: Theory}
+
+\hypertarget{6.1}{}
+\subsection{d'Alembert's convergence test}
+\begin{equation*}
+    1. \; let \; a_n>0 \; n \in \mathbb N
+\end{equation*}
+\begin{equation*}
+    2. \; let \; \underset{n \rightarrow \infty}{lim} \frac{a_{n+1}}{a_n} = \lambda \; exist
+\end{equation*}
+\begin{equation*}
+    then \; if
+\end{equation*}
+\begin{equation*}
+    q<1 \; \sum_{n=0}^{\infty} a_n \; converges
+\end{equation*}
+\begin{equation*}
+    q>1 \; \sum_{n=0}^{\infty} a_n \; diverges
+\end{equation*}
+\begin{equation*}
+    q=1 \; \sum_{n=0}^{\infty} a_n \; can \; converge \; or \; diverge
+\end{equation*}
 
 
 \newpage
