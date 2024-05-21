@@ -237,4 +237,69 @@ Example: \href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-
 \begin{equation}
     |L| = 3
 \end{equation}
+
+\newpage
+\section{Eighth problem: Taylor series}
+Method: calculate derivative of a complex part, expand the result in Taylor series, integrate result, multiply result to not complex part. \\
+Need to know: \hyperlink{8.1}{derivative table (trigonometric)}, \hyperlink{8.2}{Taylor series table}, \hyperlink{8.3}{Cauchy–Hadamard theorem}. \\
+Warnings: don't forget to correctly calculate derivative of complex function (that you must multiply derivative of argument), don't forget that you must add constant after integration (function value in the null), if you have x to the power 2n in your series, you must take square root of R that you calculated with Cauchy–Hadamard theorem \\
+Example: \href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-23/%D0%9C%D0%90%D0%98%D0%B8%D0%A0_%D0%92_23.pdf}{2022–2023}, eight task (\href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-23/%D0%9C%D0%90%D0%98%D0%B8%D0%A0_%D0%92_23%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%8B.pdf}{answer}).
+
+\begin{equation}
+    f = x^2 \arccos \frac{\sqrt{2+x}}{2} = \sum ..?
+\end{equation}
+
+\begin{equation*}
+    \frac{d}{dx} \arccos \frac{\sqrt{2+x}}{2} = \frac{-1}{\sqrt{1-\frac{2+x}{4}}} \frac{1}{4\sqrt{2+x}} = \frac{-1}{2\sqrt{4-2-x}\sqrt{2+x}} = \frac{-1}{2\sqrt{4-x^2}}
+\end{equation*}
+
+\begin{equation*}
+    \frac{-1}{2\sqrt{4-x^2}} = -\frac{1}{4}\sum_{k=0}^{\infty} C_{-1/2}^{k} (\frac{-x^2}{4})^{n} = \sum_{k=0}^{\infty} C_{-1/2}^{k} (-1)^{n+1} \frac{x^{2n}}{4^{n+1}}
+\end{equation*}
+
+\begin{equation*}
+    \arccos \frac{\sqrt{2+x}}{2} = \arccos (\frac{\sqrt{2}}{2}) + \sum_{k=0}^{\infty} C_{-1/2}^{k} (-1)^{n+1} \frac{x^{2n+1}}{4^{n+1} (2n+1)}
+\end{equation*}
+
+\begin{equation*}
+    f = \frac{\pi}{4} x^2 + \sum_{k=0}^{\infty} C_{-1/2}^{k} (-1)^{n+1} \frac{x^{2n+3}}{4^{n+1} (2n+1)}
+\end{equation*}
+
+\begin{equation*}
+    \underset{n \rightarrow \infty}{lim} | \frac{C_{-1/2}^{n}}{4^{n+1}(2n+1)} \frac{4^{n+2}(2n+3)}{C_{-1/2}^{n+1}}|
+\end{equation*}
+
+\newpage
+\section{Eighth problem: Theory}
+
+\hypertarget{8.1}{}
+\subsection{Trigonometric derivative table}
+\begin{equation*}
+    \frac{d}{dx}\arcsin x = \frac{1}{\sqrt{1-x^2}}
+\end{equation*}
+\begin{equation*}
+    \frac{d}{dx}\arccos x = \frac{-1}{\sqrt{1-x^2}}
+\end{equation*}
+\begin{equation*}
+    \frac{d}{dx} \arctan x = \frac{1}{1+x^2}
+\end{equation*}
+\begin{equation*}
+    \frac{d}{dx} arcctg x = \frac{-1}{1+x^2}
+\end{equation*}
+
+\hypertarget{8.2}{}
+\subsection{Taylor series table}
+\begin{equation*}
+    (1+x)^\alpha = \sum_{n=0}^{\infty} C_{\alpha}^n x^n
+\end{equation*}
+\begin{equation*}
+    C_{\alpha}^n = \frac{\alpha(\alpha - 1)...(\alpha - (n - 1))}{n!}
+\end{equation*}
+
+\hypertarget{8.3}{}
+\subsection{Cauchy–Hadamard theorem}
+\begin{equation*}
+    R = \underset{n \rightarrow \infty}{lim} |\frac{c_n}{c_{n+1}}|
+\end{equation*}
+
 \end{document}
