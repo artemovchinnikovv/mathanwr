@@ -239,6 +239,57 @@ Example: \href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-
     |L| = 3
 \end{equation}
 
+
+\newpage
+\section{Fifth problem: Improper integral of a function of constant sign with parameter}
+Method: to divide integral to two integrals from 0 to 1 and from 1 to infinity, then find using equal functions at what value each integral converges, then combine results. \\
+Need to know: equal functions. \\
+Warnings: check that integral is constant sign and write it on the paper, because equal functions work only with constant sign functions. \\
+Example: \href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-23/%D0%9C%D0%90%D0%98%D0%B8%D0%A0_%D0%92_23.pdf}{2022–2023}, fifth task (\href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-23/%D0%9C%D0%90%D0%98%D0%B8%D0%A0_%D0%92_23%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%8B.pdf}{answer}).
+\begin{equation}
+    \int_{0}^{\infty} \frac{(\sqrt{x^2+x^4}-x)^\alpha }{(x- \ln x)^2 \ln (e^x-x)} dx
+\end{equation}
+\begin{equation*}
+    let \; x \rightarrow 0, \; then
+\end{equation*}
+\begin{equation*}
+    f(x) \sim \frac{(x \sqrt{1+x^2}-x)^\alpha}{\ln^2 x \ln (1+x+\frac{x^2}{2}-x)} \sim \frac{(x+\frac{x^3}{2}-x)^\alpha}{\ln^2 x \cdot x^2} \sim \frac{x^{3\alpha}}{\ln^2 x \cdot x^2} \sim \frac{1}{\ln^2 x \cdot x^{2-3\alpha}}
+\end{equation*}
+\begin{equation*}
+    congerges, \; if \; (2-3\alpha)<1, \; but \; we \; have \; \ln ^ 2 x, \; so
+\end{equation*}
+\begin{equation*}
+    (2-3\alpha) \leq 1
+\end{equation*}
+\begin{equation*}
+    1 \leq 3 \alpha
+\end{equation*}
+\begin{equation}
+    \frac{1}{3} \leq \alpha
+\end{equation}
+\begin{equation*}
+    let \; x \rightarrow \infty, \; then
+\end{equation*}
+\begin{equation*}
+    f(x) \sim \frac{x^{2 \alpha}}{x^2 \cdot x} \sim \frac{1}{x^{3-2\alpha}}
+\end{equation*}
+\begin{equation*}
+    congerges, \; if \; (3-2\alpha)>1
+\end{equation*}
+\begin{equation*}
+    2 > 2 \alpha
+\end{equation*}
+\begin{equation}
+    1 > \alpha
+\end{equation}
+\begin{equation*}
+    finally
+\end{equation*}
+\begin{equation}
+    \int_{0}^{\infty} \frac{(\sqrt{x^2+x^4}-x)^\alpha }{(x- \ln x)^2 \ln (e^x-x)} dx \; converges \; at \; \frac{1}{3} \leq \alpha < 1
+\end{equation}
+
+
 \newpage
 \section{Sixth problem: Convergence of a constant sign number series}
 Method: to find a suitable convergence test.\\
