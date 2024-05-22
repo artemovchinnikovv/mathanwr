@@ -174,9 +174,9 @@ Example: \href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-
 \section{Third problem:  Length, area and volume calculation using definite integral}
 
 \subsection{Length}
-
-Methods: . \\
-Warnings: . \\
+Method: use suitable formula and calculate definite integral. \\
+Need to know: \hyperlink{3.1}{formulas for length, area and volume}, trigonometric formulas. \\
+Warnings: accurate calculation. \\
 Example: \href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-23/%D0%9C%D0%90%D0%98%D0%B8%D0%A0_%D0%92_23.pdf}{2022–2023}, third task (\href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-23/%D0%9C%D0%90%D0%98%D0%B8%D0%A0_%D0%92_23%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%8B.pdf}{answer}).
 
 \begin{equation}
@@ -313,6 +313,43 @@ Example: \href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-
 
 
 \newpage
+\section{Seventh problem: Pointwise and uniform convergence of functional sequence and functional series}
+a. Functional sequence \\
+b. Functional series
+Method: find a limit, limit functional sequence / functional series on a set or prove that functional sequence can dis-converge to this limit.\\
+Need to know: equal functions, Taylor's formula. \\
+Warnings: if you prove limit it doesn't say anything about uniform convergence, you must limit it, and don't forget that equal functions work only with sign constant functions. \\
+Example: \href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-23/%D0%9C%D0%90%D0%98%D0%B8%D0%A0_%D0%92_23.pdf}{2022–2023}, seven task (\href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-23/%D0%9C%D0%90%D0%98%D0%B8%D0%A0_%D0%92_23%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%8B.pdf}{answer}).
+\subsection{Functional sequence}
+\begin{equation}
+    E_1=(0,1), \; E_2=(1, +\infty), \; f_n (x) = \frac{n}{x} \sin \frac{x^2}{n}
+\end{equation}
+\begin{equation*}
+    \underset{n \rightarrow \infty}{lim} f_n (x) = \underset{n \rightarrow \infty}{lim} \frac{n}{x}(\frac{x^2}{n}-\frac{x^6}{6n^3}+o(\frac{1}{n^3})) = \underset{n \rightarrow \infty}{lim} x + o(\frac{1}{n}) = x
+\end{equation*}
+\begin{equation*}
+    \Rightarrow \; pointwise \; converges \; on \; the \; sets \; E_1 \; and \; E_2
+\end{equation*}
+\begin{equation*}
+    lets \; look \; on \; E_1
+\end{equation*}
+\begin{equation*}
+    |\frac{n}{x} \sin \frac{x^2}{n} - x| = |\frac{n}{x}(\sin \frac{x^2}{n}-\frac{x^2}{n})| \leq |\frac{n}{x}\frac{x^4}{2n^2}| \leq \frac{1}{2n} \rightarrow 0 \; (biggest \; x=1)
+\end{equation*}
+\begin{equation}
+    \Rightarrow \; uniform \; converges \; on \; the \; set \; E_1
+\end{equation}
+\begin{equation*}
+    lets \; look \; on \; E_2
+\end{equation*}
+\begin{equation*}
+    let \; x = \sqrt{n}
+\end{equation*}
+\begin{equation}
+    \frac{n}{x} \sin \frac{x^2}{n} = \sqrt{n} \sin 1 \rightarrow \infty \; at \; n \rightarrow \infty \Rightarrow \; uniform \; disconverges \; on \; the \; set \; E_2
+\end{equation}
+
+\newpage
 \section{Eighth problem: Taylor series}
 Method: calculate derivative of a complex part, expand the result in Taylor series, integrate result, multiply result to not complex part. \\
 Need to know: \hyperlink{8.1}{derivative table (trigonometric)}, \hyperlink{8.2}{Taylor series table}, \hyperlink{8.3}{Cauchy–Hadamard theorem}. \\
@@ -350,6 +387,33 @@ Example: \href{https://old.mipt.ru/education/chair/mathematics/exams/exams/2022-
 \begin{equation}
     R = 2
 \end{equation}
+
+
+\newpage
+\section{Third problem: Theory}
+
+\hypertarget{3.1}{}
+\subsection{Formulas for length, area and volume}
+Length $|L|$:
+\begin{equation*}
+    |L| = \int_a^b \sqrt{(\frac{dx}{dt})^2+(\frac{dy}{dt})^2+(\frac{dz}{dt})^2}dt
+\end{equation*}
+Area $|S|$ rotating around the $Ox$ axis:
+\begin{equation*}
+    |S| = 2 \pi \int_a^b y \sqrt{(\frac{dx}{dt})^2+(\frac{dy}{dt})^2}dt
+\end{equation*}
+Area $|S|$ rotating around the $Oy$ axis:
+\begin{equation*}
+    |S| = 2 \pi \int_a^b x \sqrt{(\frac{dx}{dt})^2+(\frac{dy}{dt})^2}dt
+\end{equation*}
+Volume $|V|$ rotating around the $Ox$ axis:
+\begin{equation*}
+    |V| = \pi \int_a^b y^2 dx
+\end{equation*}
+Volume $|V|$ rotating around the $Oy$ axis:
+\begin{equation*}
+    |V| = \pi \int_a^b x^2 dy
+\end{equation*}
 
 
 \newpage
